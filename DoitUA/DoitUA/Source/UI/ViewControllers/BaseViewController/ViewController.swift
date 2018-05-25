@@ -25,5 +25,27 @@ class ViewController: UIViewController {
         
         (mainView as? ScrollableView)?.unsubscribeFromKeyboardEvents()
     }
+    
+    //MARK: - Actions
+    
+    @IBAction func hideKeyboard(_ sender: Any) {
+        view.endEditing(true)
+    }
 
+    //MARK: - Public
+
+    func showFailure(_ message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
+    }
+    
+    func showError(_ error: Error?) {
+        guard let error = error else {
+            return
+        }
+        
+        showFailure(error.localizedDescription)
+    }
+    
 }
