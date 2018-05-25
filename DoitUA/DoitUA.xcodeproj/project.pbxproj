@@ -12,6 +12,9 @@
 		424BD34E20B6D506007FB27D /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD34D20B6D506007FB27D /* APIConfiguration.swift */; };
 		424BD35220B6DAA5007FB27D /* NetworkContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD35120B6DAA5007FB27D /* NetworkContext.swift */; };
 		424BD36C20B82B85007FB27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 424BD36A20B82B85007FB27D /* Main.storyboard */; };
+		424BD37420B83143007FB27D /* LoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD37220B83143007FB27D /* LoginContext.swift */; };
+		424BD37520B83143007FB27D /* SignUpContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD37320B83143007FB27D /* SignUpContext.swift */; };
+		424BD37820B8314C007FB27D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD37720B8314C007FB27D /* Session.swift */; };
 		4294942E20B55B8F00E27E77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294942D20B55B8F00E27E77 /* AppDelegate.swift */; };
 		4294943020B55B8F00E27E77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294942F20B55B8F00E27E77 /* ViewController.swift */; };
 		4294943520B55B9000E27E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4294943420B55B9000E27E77 /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 		424BD34D20B6D506007FB27D /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		424BD35120B6DAA5007FB27D /* NetworkContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkContext.swift; sourceTree = "<group>"; };
 		424BD36B20B82B85007FB27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		424BD37220B83143007FB27D /* LoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContext.swift; sourceTree = "<group>"; };
+		424BD37320B83143007FB27D /* SignUpContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpContext.swift; sourceTree = "<group>"; };
+		424BD37720B8314C007FB27D /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		4294942A20B55B8F00E27E77 /* DoitUA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoitUA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4294942D20B55B8F00E27E77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4294942F20B55B8F00E27E77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +57,23 @@
 				424BD34920B69F9B007FB27D /* NetworkRequest.swift */,
 			);
 			path = BaseContext;
+			sourceTree = "<group>";
+		};
+		424BD37120B83143007FB27D /* Contexts */ = {
+			isa = PBXGroup;
+			children = (
+				424BD37220B83143007FB27D /* LoginContext.swift */,
+				424BD37320B83143007FB27D /* SignUpContext.swift */,
+			);
+			path = Contexts;
+			sourceTree = "<group>";
+		};
+		424BD37620B8314C007FB27D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				424BD37720B8314C007FB27D /* Session.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4294942120B55B8F00E27E77 = {
@@ -144,6 +167,8 @@
 			children = (
 				424BD34D20B6D506007FB27D /* APIConfiguration.swift */,
 				424BD34520B69C59007FB27D /* BaseContext */,
+				424BD37120B83143007FB27D /* Contexts */,
+				424BD37620B8314C007FB27D /* Models */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -219,12 +244,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424BD37420B83143007FB27D /* LoginContext.swift in Sources */,
+				424BD37520B83143007FB27D /* SignUpContext.swift in Sources */,
 				424BD35220B6DAA5007FB27D /* NetworkContext.swift in Sources */,
 				424BD34A20B69F9B007FB27D /* NetworkRequest.swift in Sources */,
 				424BD34E20B6D506007FB27D /* APIConfiguration.swift in Sources */,
 				4294943020B55B8F00E27E77 /* ViewController.swift in Sources */,
 				424BD34720B69C74007FB27D /* Context.swift in Sources */,
 				4294942E20B55B8F00E27E77 /* AppDelegate.swift in Sources */,
+				424BD37820B8314C007FB27D /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
