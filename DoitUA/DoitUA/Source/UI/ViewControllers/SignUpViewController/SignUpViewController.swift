@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-class SignUpViewController: ViewController {
+class SignUpViewController: ViewController, ImageSelector {
     
     private let signupModel = SignUpViewModel()
     
@@ -28,22 +28,7 @@ class SignUpViewController: ViewController {
     //MARK: - Private methods
     
     @IBAction func didClickOnAvatar(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let alertController = UIAlertController(title: "Select avatar photo",
-                                                    message: nil,
-                                                    preferredStyle: .actionSheet)
-            [UIAlertAction(title: "Take photo", style: .default, handler: { _ in
-                self.showImagePicker(with: .camera)
-            }),
-             UIAlertAction(title: "Select from Library", style: .default, handler: { _ in
-                self.showImagePicker(with: .photoLibrary)
-             }),
-             UIAlertAction(title: "Cancel", style: .cancel)]
-                .forEach(alertController.addAction)
-            present(alertController, animated: true, completion: nil)
-        } else {
-            showImagePicker(with: .photoLibrary)
-        }
+        showPicker(with: "Select avatar photo")
     }
     
     @IBAction func didChangeEmail(_ sender: UITextField) {
@@ -72,16 +57,7 @@ class SignUpViewController: ViewController {
 }
 
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    private func showImagePicker(with sourceType: UIImagePickerControllerSourceType) {
-        let controller = UIImagePickerController()
-        controller.allowsEditing = false
-        controller.delegate = self
-        controller.mediaTypes = [kUTTypeImage as String]
-        controller.sourceType = sourceType
-        self.present(controller, animated: true, completion: nil)
-    }
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         picker.dismiss(animated: false, completion: nil)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -89,9 +65,5 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
             avatarImageView.image = image
         }
     }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
+
 }
