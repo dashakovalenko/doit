@@ -15,7 +15,10 @@
 		424BD37420B83143007FB27D /* LoginContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD37220B83143007FB27D /* LoginContext.swift */; };
 		424BD37520B83143007FB27D /* SignUpContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD37320B83143007FB27D /* SignUpContext.swift */; };
 		424BD37820B8314C007FB27D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD37720B8314C007FB27D /* Session.swift */; };
+		424BD37A20B83190007FB27D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD37920B83190007FB27D /* View.swift */; };
+		424BD38C20B83287007FB27D /* NotificationNameExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD38B20B83287007FB27D /* NotificationNameExtensions.swift */; };
 		424BD39920B838AD007FB27D /* NSErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD39820B838AD007FB27D /* NSErrorExtensions.swift */; };
+		424BD39E20B8438D007FB27D /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD39D20B8438D007FB27D /* ScrollableView.swift */; };
 		4294942E20B55B8F00E27E77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294942D20B55B8F00E27E77 /* AppDelegate.swift */; };
 		4294943020B55B8F00E27E77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294942F20B55B8F00E27E77 /* ViewController.swift */; };
 		4294943520B55B9000E27E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4294943420B55B9000E27E77 /* Assets.xcassets */; };
@@ -31,7 +34,10 @@
 		424BD37220B83143007FB27D /* LoginContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContext.swift; sourceTree = "<group>"; };
 		424BD37320B83143007FB27D /* SignUpContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpContext.swift; sourceTree = "<group>"; };
 		424BD37720B8314C007FB27D /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		424BD37920B83190007FB27D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		424BD38B20B83287007FB27D /* NotificationNameExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationNameExtensions.swift; sourceTree = "<group>"; };
 		424BD39820B838AD007FB27D /* NSErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtensions.swift; sourceTree = "<group>"; };
+		424BD39D20B8438D007FB27D /* ScrollableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollableView.swift; path = DoitUA/Source/UI/Views/ScrollableView/ScrollableView.swift; sourceTree = SOURCE_ROOT; };
 		4294942A20B55B8F00E27E77 /* DoitUA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoitUA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4294942D20B55B8F00E27E77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4294942F20B55B8F00E27E77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,8 +84,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		424BD37B20B831A5007FB27D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				424BD37C20B831B3007FB27D /* BaseView */,
+				424BD38D20B8331D007FB27D /* ScrollableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		424BD37C20B831B3007FB27D /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				424BD37920B83190007FB27D /* View.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
 		424BD38920B83287007FB27D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,9 +112,19 @@
 		424BD38A20B83287007FB27D /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				424BD38B20B83287007FB27D /* NotificationNameExtensions.swift */,
 				424BD39820B838AD007FB27D /* NSErrorExtensions.swift */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		424BD38D20B8331D007FB27D /* ScrollableView */ = {
+			isa = PBXGroup;
+			children = (
+				424BD39D20B8438D007FB27D /* ScrollableView.swift */,
+			);
+			name = ScrollableView;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4294942120B55B8F00E27E77 = {
@@ -145,6 +176,7 @@
 		4294944120B55C0900E27E77 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				424BD37B20B831A5007FB27D /* Views */,
 				4294944220B55C0F00E27E77 /* ViewControllers */,
 			);
 			path = UI;
@@ -267,12 +299,15 @@
 			files = (
 				424BD37420B83143007FB27D /* LoginContext.swift in Sources */,
 				424BD37520B83143007FB27D /* SignUpContext.swift in Sources */,
+				424BD39E20B8438D007FB27D /* ScrollableView.swift in Sources */,
+				424BD37A20B83190007FB27D /* View.swift in Sources */,
 				424BD35220B6DAA5007FB27D /* NetworkContext.swift in Sources */,
 				424BD39920B838AD007FB27D /* NSErrorExtensions.swift in Sources */,
 				424BD34A20B69F9B007FB27D /* NetworkRequest.swift in Sources */,
 				424BD34E20B6D506007FB27D /* APIConfiguration.swift in Sources */,
 				4294943020B55B8F00E27E77 /* ViewController.swift in Sources */,
 				424BD34720B69C74007FB27D /* Context.swift in Sources */,
+				424BD38C20B83287007FB27D /* NotificationNameExtensions.swift in Sources */,
 				4294942E20B55B8F00E27E77 /* AppDelegate.swift in Sources */,
 				424BD37820B8314C007FB27D /* Session.swift in Sources */,
 			);
