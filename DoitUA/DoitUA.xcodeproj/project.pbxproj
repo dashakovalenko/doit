@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424BD34720B69C74007FB27D /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD34620B69C74007FB27D /* Context.swift */; };
+		424BD34A20B69F9B007FB27D /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD34920B69F9B007FB27D /* NetworkRequest.swift */; };
+		424BD34E20B6D506007FB27D /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD34D20B6D506007FB27D /* APIConfiguration.swift */; };
+		424BD35220B6DAA5007FB27D /* NetworkContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD35120B6DAA5007FB27D /* NetworkContext.swift */; };
 		424BD36C20B82B85007FB27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 424BD36A20B82B85007FB27D /* Main.storyboard */; };
 		4294942E20B55B8F00E27E77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294942D20B55B8F00E27E77 /* AppDelegate.swift */; };
 		4294943020B55B8F00E27E77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294942F20B55B8F00E27E77 /* ViewController.swift */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		424BD34620B69C74007FB27D /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		424BD34920B69F9B007FB27D /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		424BD34D20B6D506007FB27D /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		424BD35120B6DAA5007FB27D /* NetworkContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkContext.swift; sourceTree = "<group>"; };
 		424BD36B20B82B85007FB27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4294942A20B55B8F00E27E77 /* DoitUA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoitUA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4294942D20B55B8F00E27E77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		424BD34520B69C59007FB27D /* BaseContext */ = {
+			isa = PBXGroup;
+			children = (
+				424BD34620B69C74007FB27D /* Context.swift */,
+				424BD35120B6DAA5007FB27D /* NetworkContext.swift */,
+				424BD34920B69F9B007FB27D /* NetworkRequest.swift */,
+			);
+			path = BaseContext;
+			sourceTree = "<group>";
+		};
 		4294942120B55B8F00E27E77 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +83,7 @@
 		4294943F20B55BCE00E27E77 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4294945020B58B5600E27E77 /* Lib */,
 				4294944120B55C0900E27E77 /* UI */,
 			);
 			path = Source;
@@ -102,6 +121,31 @@
 				4294942F20B55B8F00E27E77 /* ViewController.swift */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		4294945020B58B5600E27E77 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				4294945820B5B66900E27E77 /* Utilities */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		4294945820B5B66900E27E77 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4294945920B5B67400E27E77 /* Network */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4294945920B5B67400E27E77 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				424BD34D20B6D506007FB27D /* APIConfiguration.swift */,
+				424BD34520B69C59007FB27D /* BaseContext */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424BD35220B6DAA5007FB27D /* NetworkContext.swift in Sources */,
+				424BD34A20B69F9B007FB27D /* NetworkRequest.swift in Sources */,
+				424BD34E20B6D506007FB27D /* APIConfiguration.swift in Sources */,
 				4294943020B55B8F00E27E77 /* ViewController.swift in Sources */,
+				424BD34720B69C74007FB27D /* Context.swift in Sources */,
 				4294942E20B55B8F00E27E77 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
