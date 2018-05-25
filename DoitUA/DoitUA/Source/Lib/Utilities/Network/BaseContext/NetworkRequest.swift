@@ -155,13 +155,3 @@ final class NetworkRequest {
     }
     
 }
-
-extension NSError {
-    
-    fileprivate class func error(with errorCode: Int = 999, description: String) -> NSError {
-        return NSError(domain: "ua.doit",
-                       code: errorCode,
-                       userInfo: [NSLocalizedDescriptionKey : description])
-    }
-    
-}
