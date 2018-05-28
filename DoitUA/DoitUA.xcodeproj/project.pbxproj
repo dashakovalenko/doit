@@ -11,6 +11,8 @@
 		421140E220BC31CC006D82A9 /* ImagesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421140E020BC31CC006D82A9 /* ImagesViewController.storyboard */; };
 		421140E820BC31E2006D82A9 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421140E420BC31E2006D82A9 /* ImagesViewController.swift */; };
 		421140E920BC31E2006D82A9 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421140E620BC31E2006D82A9 /* ImageViewController.swift */; };
+		421140EA20BC31E2006D82A9 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421140E720BC31E2006D82A9 /* ImageViewModel.swift */; };
+		421140EC20BC4043006D82A9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421140EB20BC4043006D82A9 /* LocationManager.swift */; };
 		424BD34720B69C74007FB27D /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD34620B69C74007FB27D /* Context.swift */; };
 		424BD34A20B69F9B007FB27D /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD34920B69F9B007FB27D /* NetworkRequest.swift */; };
 		424BD34E20B6D506007FB27D /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD34D20B6D506007FB27D /* APIConfiguration.swift */; };
@@ -41,6 +43,8 @@
 		421140E120BC31CC006D82A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ImagesViewController.storyboard; sourceTree = "<group>"; };
 		421140E420BC31E2006D82A9 /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		421140E620BC31E2006D82A9 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		421140E720BC31E2006D82A9 /* ImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		421140EB20BC4043006D82A9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		424BD34620B69C74007FB27D /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		424BD34920B69F9B007FB27D /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		424BD34D20B6D506007FB27D /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
@@ -99,8 +103,17 @@
 			isa = PBXGroup;
 			children = (
 				421140E620BC31E2006D82A9 /* ImageViewController.swift */,
+				421140E720BC31E2006D82A9 /* ImageViewModel.swift */,
 			);
 			path = ImageViewController;
+			sourceTree = "<group>";
+		};
+		421140ED20BC44B8006D82A9 /* LocationMnager */ = {
+			isa = PBXGroup;
+			children = (
+				421140EB20BC4043006D82A9 /* LocationManager.swift */,
+			);
+			path = LocationMnager;
 			sourceTree = "<group>";
 		};
 		424BD34520B69C59007FB27D /* BaseContext */ = {
@@ -282,6 +295,7 @@
 		4294945820B5B66900E27E77 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				421140ED20BC44B8006D82A9 /* LocationMnager */,
 				4294945920B5B67400E27E77 /* Network */,
 			);
 			path = Utilities;
@@ -381,6 +395,8 @@
 				424BD39920B838AD007FB27D /* NSErrorExtensions.swift in Sources */,
 				424BD39720B837A7007FB27D /* ViewModel.swift in Sources */,
 				424BD34A20B69F9B007FB27D /* NetworkRequest.swift in Sources */,
+				421140EA20BC31E2006D82A9 /* ImageViewModel.swift in Sources */,
+				421140EC20BC4043006D82A9 /* LocationManager.swift in Sources */,
 				424BD3AD20B852F2007FB27D /* MainScreenPresenter.swift in Sources */,
 				424BD34E20B6D506007FB27D /* APIConfiguration.swift in Sources */,
 				4294943020B55B8F00E27E77 /* ViewController.swift in Sources */,
@@ -547,7 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WKY2745G4T;
 				INFOPLIST_FILE = DoitUA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,7 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WKY2745G4T;
 				INFOPLIST_FILE = DoitUA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
