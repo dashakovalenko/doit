@@ -14,8 +14,10 @@ class ViewController: UIViewController {
         return isViewLoaded ? view as? View : nil
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    //MARK: - View lifecycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         (mainView as? ScrollableView)?.subscribeToKeyboardEvents()
     }
