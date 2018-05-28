@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NibLoaded {
 
     var mainView: View? {
         return isViewLoaded ? view as? View : nil

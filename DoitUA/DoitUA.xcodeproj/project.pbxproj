@@ -39,6 +39,8 @@
 		4294943020B55B8F00E27E77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294942F20B55B8F00E27E77 /* ViewController.swift */; };
 		4294943520B55B9000E27E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4294943420B55B9000E27E77 /* Assets.xcassets */; };
 		4294943820B55B9000E27E77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4294943620B55B9000E27E77 /* LaunchScreen.storyboard */; };
+		42C672B020BC5D37001DF4F1 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672AF20BC5D37001DF4F1 /* Reusable.swift */; };
+		42C672B220BC607A001DF4F1 /* NibLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672B120BC607A001DF4F1 /* NibLoaded.swift */; };
 		6DDA4B80C12BEE6B10D53154 /* Pods_DoitUA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8580E3590A9CB2CD88E1F7BA /* Pods_DoitUA.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		4294943420B55B9000E27E77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4294943720B55B9000E27E77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4294943920B55B9000E27E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42C672AF20BC5D37001DF4F1 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		42C672B120BC607A001DF4F1 /* NibLoaded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoaded.swift; sourceTree = "<group>"; };
 		6BF86E33C694EA1209BD908C /* Pods-DoitUA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitUA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoitUA/Pods-DoitUA.debug.xcconfig"; sourceTree = "<group>"; };
 		8580E3590A9CB2CD88E1F7BA /* Pods_DoitUA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoitUA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -222,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				424BD3A920B8464D007FB27D /* ImageSelector.swift */,
+				42C672AF20BC5D37001DF4F1 /* Reusable.swift */,
+				42C672B120BC607A001DF4F1 /* NibLoaded.swift */,
 				424BD3AC20B852F2007FB27D /* MainScreenPresenter.swift */,
 			);
 			path = UIProtocols;
@@ -461,6 +467,7 @@
 				424BD38820B8323E007FB27D /* LoginViewController.swift in Sources */,
 				421140DF20BBEF11006D82A9 /* ScrollableView.swift in Sources */,
 				424BD37420B83143007FB27D /* LoginContext.swift in Sources */,
+				42C672B220BC607A001DF4F1 /* NibLoaded.swift in Sources */,
 				424BD37520B83143007FB27D /* SignUpContext.swift in Sources */,
 				424BD39C20B83B4A007FB27D /* SignUpViewModel.swift in Sources */,
 				424BD37A20B83190007FB27D /* View.swift in Sources */,
@@ -485,6 +492,7 @@
 				424BD37820B8314C007FB27D /* Session.swift in Sources */,
 				424BD38520B83237007FB27D /* SignUpViewController.swift in Sources */,
 				421140E920BC31E2006D82A9 /* ImageViewController.swift in Sources */,
+				42C672B020BC5D37001DF4F1 /* Reusable.swift in Sources */,
 				424BD3B420B8767B007FB27D /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

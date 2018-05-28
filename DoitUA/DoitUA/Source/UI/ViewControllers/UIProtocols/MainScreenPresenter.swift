@@ -14,7 +14,7 @@ protocol MainScreenPresenter {
 extension MainScreenPresenter where Self: UIViewController {
     
     func showMainImagesScreen(_ session: Session) {
-        let identifier = NSStringFromClass(ImagesViewController.self).components(separatedBy: ".").last ?? ""
+        let identifier = ImagesViewController.nibName
         guard let imagesViewController = UIStoryboard(name: identifier, bundle: nil)
             .instantiateViewController(withIdentifier: identifier) as? ImagesViewController else {
             fatalError()
