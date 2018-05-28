@@ -10,10 +10,25 @@ import UIKit
 
 class ImagesViewController: ViewController {
 
-    var session: Session?
+    let imagesViewModel = ImagesViewModel()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var session: Session? {
+        get {
+            return imagesViewModel.session
+        }
+        set {
+            imagesViewModel.session = newValue
+        }
+    }
+    
+    //MARK: - View lifecycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        imagesViewModel.loadData { result in
+            print(result)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

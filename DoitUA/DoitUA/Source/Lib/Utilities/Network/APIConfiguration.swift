@@ -15,6 +15,7 @@ struct APIConfiguration {
         static let create = "create"
         static let login = "login"
         static let image = "image"
+        static let all = "all"
     }
     
     struct User {
@@ -31,6 +32,11 @@ struct APIConfiguration {
         static let hashtag = "hashtag"
         static let latitude = "latitude"
         static let longitude = "longitude"
+        static let weather = "weather"
+        static let id = "id"
+        static let imagePath = "smallImagePath"
+        static let parameters = "parameters"
+        static let address = "address"
     }
     
 }

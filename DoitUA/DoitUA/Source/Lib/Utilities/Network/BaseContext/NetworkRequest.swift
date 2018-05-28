@@ -23,7 +23,7 @@ final class NetworkRequest {
     func sendRequest<T>(with method: HTTPMethod,
                         path: String,
                         token: String? = nil,
-                        parameters: [String: AnyObject]?,
+                        parameters: [String: AnyObject]? = nil,
                         successHandler: @escaping (([String: AnyObject]?) -> T?),
                         failureHandler: (([String: AnyObject]?) -> String?)? = nil,
                         completion: ((Result<T>)-> ())?) {
@@ -33,7 +33,7 @@ final class NetworkRequest {
         }
         
         var request = URLRequest(url: requestURL)
-        request.httpMethod = HTTPMethod.post.rawValue
+        request.httpMethod = method.rawValue
         
         var header = ["Content-Type": "application/json"]
         header[APIConfiguration.User.token] = token
