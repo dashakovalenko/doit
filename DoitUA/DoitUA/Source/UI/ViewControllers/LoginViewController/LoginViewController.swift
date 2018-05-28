@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: ViewController {
+class LoginViewController: ViewController, MainScreenPresenter {
     
     private let loginModel = LoginViewModel()
     
@@ -39,6 +39,7 @@ class LoginViewController: ViewController {
             switch result {
             case .success(let response):
                 print(String(describing: response))
+                self?.showMainImagesScreen(response)
             case .failure(let error):
                 self?.showError(error)
             }
