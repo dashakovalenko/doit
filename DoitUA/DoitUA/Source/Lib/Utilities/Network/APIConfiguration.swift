@@ -14,6 +14,7 @@ struct APIConfiguration {
     struct Paths {
         static let create = "create"
         static let login = "login"
+        static let image = "image"
     }
     
     struct User {
@@ -22,6 +23,14 @@ struct APIConfiguration {
         static let username = "username"
         static let avatar = "avatar"
         static let token = "token"
+    }
+    
+    struct Image {
+        static let image = "image"
+        static let description = "description"
+        static let hashtag = "hashtag"
+        static let latitude = "latitude"
+        static let longitude = "longitude"
     }
     
 }

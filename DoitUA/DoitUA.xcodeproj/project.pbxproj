@@ -25,6 +25,7 @@
 		424BD39920B838AD007FB27D /* NSErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD39820B838AD007FB27D /* NSErrorExtensions.swift */; };
 		424BD39C20B83B4A007FB27D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD39B20B83B4A007FB27D /* SignUpViewModel.swift */; };
 		424BD3AA20B8464D007FB27D /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD3A920B8464D007FB27D /* ImageSelector.swift */; };
+		424BD3B220B8766B007FB27D /* ImageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BD3B120B8766B007FB27D /* ImageContext.swift */; };
 		4294942E20B55B8F00E27E77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294942D20B55B8F00E27E77 /* AppDelegate.swift */; };
 		4294943020B55B8F00E27E77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4294942F20B55B8F00E27E77 /* ViewController.swift */; };
 		4294943520B55B9000E27E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4294943420B55B9000E27E77 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		424BD39820B838AD007FB27D /* NSErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtensions.swift; sourceTree = "<group>"; };
 		424BD39B20B83B4A007FB27D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		424BD3A920B8464D007FB27D /* ImageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
+		424BD3B120B8766B007FB27D /* ImageContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContext.swift; sourceTree = "<group>"; };
 		4294942A20B55B8F00E27E77 /* DoitUA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoitUA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4294942D20B55B8F00E27E77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4294942F20B55B8F00E27E77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				424BD37220B83143007FB27D /* LoginContext.swift */,
 				424BD37320B83143007FB27D /* SignUpContext.swift */,
+				424BD3B120B8766B007FB27D /* ImageContext.swift */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				424BD39120B835D6007FB27D /* LoginViewModel.swift in Sources */,
 				424BD38C20B83287007FB27D /* NotificationNameExtensions.swift in Sources */,
 				4294942E20B55B8F00E27E77 /* AppDelegate.swift in Sources */,
+				424BD3B220B8766B007FB27D /* ImageContext.swift in Sources */,
 				424BD37820B8314C007FB27D /* Session.swift in Sources */,
 				424BD38520B83237007FB27D /* SignUpViewController.swift in Sources */,
 			);

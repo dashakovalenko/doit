@@ -22,6 +22,7 @@ final class NetworkRequest {
     
     func sendRequest<T>(with method: HTTPMethod,
                         path: String,
+                        token: String? = nil,
                         parameters: [String: AnyObject]?,
                         successHandler: @escaping (([String: AnyObject]?) -> T?),
                         failureHandler: (([String: AnyObject]?) -> String?)? = nil,
@@ -33,7 +34,11 @@ final class NetworkRequest {
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
-        request.allHTTPHeaderFields = ["Content-Type": "application/json"]
+        
+        var header = ["Content-Type": "application/json"]
+        header[APIConfiguration.User.token] = token
+        request.allHTTPHeaderFields = header
+        
         request.httpBody = serialized(parameters)
         
         self.send(request, successHandler: successHandler, failureHandler: failureHandler, completion: completion)
@@ -43,6 +48,7 @@ final class NetworkRequest {
                                 parameters: [String: String],
                                 image: UIImage,
                                 imageKey: String,
+                                token: String? = nil,
                                 successHandler: @escaping (([String: AnyObject]?) -> T?),
                                 failureHandler: (([String: AnyObject]?) -> String?)? = nil,
                                 completion: ((Result<T>)-> ())?)
@@ -55,6 +61,7 @@ final class NetworkRequest {
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
+        token.map { request.allHTTPHeaderFields = [APIConfiguration.User.token: $0] }
         
         let boundary = String(format: "doitua.boundary.%08x%08x", arc4random(), arc4random())
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
@@ -63,10 +70,16 @@ final class NetworkRequest {
         self.send(request, successHandler: successHandler, failureHandler: failureHandler, completion: completion)
     }
     
-    func send<T>(_ request: URLRequest,
-                 successHandler: @escaping (([String: AnyObject]?) -> T?),
-                 failureHandler: (([String: AnyObject]?) -> String?)? = nil,
-                 completion: ((Result<T>)-> ())?)
+    func cancel() {
+        self.dataTask?.cancel()
+    }
+    
+    //MARK: - Private
+    
+    private func send<T>(_ request: URLRequest,
+                         successHandler: @escaping (([String: AnyObject]?) -> T?),
+                         failureHandler: (([String: AnyObject]?) -> String?)? = nil,
+                         completion: ((Result<T>)-> ())?)
     {
         let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
             if let result = self?.result(with: data, response: response, error: error, success: successHandler, failure:failureHandler) {
@@ -78,12 +91,6 @@ final class NetworkRequest {
         task.resume()
         self.dataTask = task
     }
-    
-    func cancel() {
-        self.dataTask?.cancel()
-    }
-    
-    //MARK: - Private
     
     private func serialized(_ parameters: [String: AnyObject]?) -> Data? {
         guard let dictionary = parameters,
