@@ -9,9 +9,10 @@
 import UIKit
 
 class ImagesViewController: ViewController {
-
-    let imagesViewModel = ImagesViewModel()
     
+    @IBOutlet var imagesCollectionView: UICollectionView!
+    
+    let imagesViewModel = ImagesViewModel()
     var session: Session? {
         get {
             return imagesViewModel.session
@@ -26,8 +27,9 @@ class ImagesViewController: ViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        imagesViewModel.loadData { result in
+        imagesViewModel.loadData { [weak self] result in
             print(result)
+            self?.imagesCollectionView.reloadData()
         }
     }
     
@@ -36,3 +38,19 @@ class ImagesViewController: ViewController {
     }
     
 }
+
+extension ImagesViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imagesViewModel.images.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: ImageCollectionViewCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.setup(with: imagesViewModel.images[indexPath.row])
+        
+        return cell
+    }
+    
+}
+
