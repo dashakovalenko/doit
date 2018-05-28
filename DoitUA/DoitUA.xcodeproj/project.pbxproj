@@ -42,6 +42,7 @@
 		4294943820B55B9000E27E77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4294943620B55B9000E27E77 /* LaunchScreen.storyboard */; };
 		42C672B020BC5D37001DF4F1 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672AF20BC5D37001DF4F1 /* Reusable.swift */; };
 		42C672B220BC607A001DF4F1 /* NibLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672B120BC607A001DF4F1 /* NibLoaded.swift */; };
+		42C672B520BC63AA001DF4F1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672B420BC63AA001DF4F1 /* UIImage+Extensions.swift */; };
 		6DDA4B80C12BEE6B10D53154 /* Pods_DoitUA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8580E3590A9CB2CD88E1F7BA /* Pods_DoitUA.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		4294943920B55B9000E27E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C672AF20BC5D37001DF4F1 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		42C672B120BC607A001DF4F1 /* NibLoaded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoaded.swift; sourceTree = "<group>"; };
+		42C672B420BC63AA001DF4F1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		6BF86E33C694EA1209BD908C /* Pods-DoitUA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitUA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoitUA/Pods-DoitUA.debug.xcconfig"; sourceTree = "<group>"; };
 		8580E3590A9CB2CD88E1F7BA /* Pods_DoitUA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoitUA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				424BD38A20B83287007FB27D /* Swift */,
+				42C672B320BC63A0001DF4F1 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,6 +356,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		42C672B320BC63A0001DF4F1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				42C672B420BC63AA001DF4F1 /* UIImage+Extensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		9E415A5D339F0166643B9F6E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +491,7 @@
 				424BD37420B83143007FB27D /* LoginContext.swift in Sources */,
 				42C672B220BC607A001DF4F1 /* NibLoaded.swift in Sources */,
 				424BD37520B83143007FB27D /* SignUpContext.swift in Sources */,
+				42C672B520BC63AA001DF4F1 /* UIImage+Extensions.swift in Sources */,
 				424BD39C20B83B4A007FB27D /* SignUpViewModel.swift in Sources */,
 				424BD37A20B83190007FB27D /* View.swift in Sources */,
 				421140F220BC46DA006D82A9 /* ImagesViewModel.swift in Sources */,

@@ -54,7 +54,8 @@ final class NetworkRequest {
                                 completion: ((Result<T>)-> ())?)
     {
         guard let requestURL = URL(string: APIConfiguration.baseURL + path),
-            let data = UIImageJPEGRepresentation(image, 0.3) else {
+            let orientedImage = image.oriented,
+            let data = UIImageJPEGRepresentation(orientedImage, 0.3) else {
                 completion?(Result.failure(NSError.error(description: "Wrong request parameters")))
                 return
         }
