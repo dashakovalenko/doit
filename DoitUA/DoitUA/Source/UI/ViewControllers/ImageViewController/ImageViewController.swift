@@ -57,15 +57,19 @@ class ImageViewController: ViewController, ImageSelector {
         showPicker(with: "Select image")
     }
     
-    @IBAction func didClickOnSend(_ sender: Any) {
-        newImageModel.loadData { [weak self] (result) in
+    @IBAction func didClickOnSend(_ sender: UIButton) {
+        self.loading = true
+        sender.isEnabled = false
+        newImageModel.loadData { (result) in
+            self.loading = false
+            sender.isEnabled = true
             switch result {
             case .success(let response):
                 print(String(describing: response))
-                self?.newImageHandler?()
-                self?.navigationController?.popViewController(animated: true)
+                self.newImageHandler?()
+                self.navigationController?.popViewController(animated: true)
             case .failure(let error):
-                self?.showError(error)
+                self.showError(error)
             }
         }
     }
