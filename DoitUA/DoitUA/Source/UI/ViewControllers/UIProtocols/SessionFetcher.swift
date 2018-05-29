@@ -1,32 +1,37 @@
 //
-//  MainScreenPresenter.swift
+//  SessionFetcher.swift
 //  DoitUA
 //
-//  Created by Daria Kovalenko on 5/25/18.
+//  Created by Daria Kovalenko on 5/29/18.
 //  Copyright © 2018 Daria Kovalenko. All rights reserved.
 //
 
 import UIKit
 
-protocol RootPresenter {}
-protocol MainScreenPresenter: RootPresenter {}
-protocol LoginPresenter: RootPresenter {}
+protocol SessionFetcher: RootPresenter {}
 
-extension RootPresenter {
+extension SessionFetcher where Self: ViewController {
     
-    fileprivate func setAsRoot(_ viewController: UIViewController?) {
-        UIApplication.shared.keyWindow?.rootViewController = viewController
+    func fetchSession(call:(((Result<Session>) -> ())?) -> Void) {
+        loading = true
+        call { [weak self] result in
+            self?.loading = false
+            print(result)
+            switch result {
+            case .success(let response):
+                print(String(describing: response))
+                self?.showMainImagesScreen(response)
+            case .failure(let error):
+                self?.showError(error)
+            }
+        }
     }
     
-}
-
-extension MainScreenPresenter {
-    
-    func showMainImagesScreen(_ session: Session) {
+    private func showMainImagesScreen(_ session: Session) {
         let identifier = ImagesViewController.nibName
         guard let imagesViewController = UIStoryboard(name: identifier, bundle: nil)
             .instantiateViewController(withIdentifier: identifier) as? ImagesViewController else {
-            fatalError()
+                fatalError()
         }
         
         imagesViewController.session = session
@@ -36,12 +41,4 @@ extension MainScreenPresenter {
         setAsRoot(navigationController)
     }
     
-}
-
-extension LoginPresenter {
-    
-    func showLoginScreen() {
-        let loginController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-        setAsRoot(loginController)
-    }
 }

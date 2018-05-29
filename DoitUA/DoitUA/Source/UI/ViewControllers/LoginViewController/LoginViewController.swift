@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: ViewController, MainScreenPresenter {
+class LoginViewController: ViewController, SessionFetcher {
     
     private let loginModel = LoginViewModel()
     
@@ -34,15 +34,6 @@ class LoginViewController: ViewController, MainScreenPresenter {
     }
     
     @IBAction func didClickOnSend(_ sender: Any) {
-        loginModel.loadData { [weak self] result in
-            print(result)
-            switch result {
-            case .success(let response):
-                print(String(describing: response))
-                self?.showMainImagesScreen(response)
-            case .failure(let error):
-                self?.showError(error)
-            }
-        }
+        fetchSession(call: loginModel.loadData)
     }
 }

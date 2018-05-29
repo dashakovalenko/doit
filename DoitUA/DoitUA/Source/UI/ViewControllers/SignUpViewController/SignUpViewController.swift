@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-class SignUpViewController: ViewController, ImageSelector {
+class SignUpViewController: ViewController, ImageSelector, SessionFetcher {
     
     private let signupModel = SignUpViewModel()
     
@@ -44,15 +44,7 @@ class SignUpViewController: ViewController, ImageSelector {
     }
     
     @IBAction func didClickOnSend(_ sender: Any) {
-        signupModel.loadData { [weak self] result in
-            print(result)
-            switch result {
-            case .success(let response):
-                print(String(describing: response))
-            case .failure(let error):
-                self?.showError(error)
-            }
-        }
+        fetchSession(call: signupModel.loadData)
     }
 }
 
