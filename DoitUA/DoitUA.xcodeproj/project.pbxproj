@@ -46,6 +46,7 @@
 		42C672BA20BD6391001DF4F1 /* GifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672B920BD6391001DF4F1 /* GifViewController.swift */; };
 		42C672BC20BD70C9001DF4F1 /* GifContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672BB20BD70C9001DF4F1 /* GifContext.swift */; };
 		42C672BE20BD7175001DF4F1 /* GifViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672BD20BD7175001DF4F1 /* GifViewModel.swift */; };
+		42C672C620BD80F2001DF4F1 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672C520BD80F2001DF4F1 /* ActivityView.swift */; };
 		6DDA4B80C12BEE6B10D53154 /* Pods_DoitUA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8580E3590A9CB2CD88E1F7BA /* Pods_DoitUA.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		42C672B920BD6391001DF4F1 /* GifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewController.swift; sourceTree = "<group>"; };
 		42C672BB20BD70C9001DF4F1 /* GifContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifContext.swift; sourceTree = "<group>"; };
 		42C672BD20BD7175001DF4F1 /* GifViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewModel.swift; sourceTree = "<group>"; };
+		42C672C520BD80F2001DF4F1 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		6BF86E33C694EA1209BD908C /* Pods-DoitUA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitUA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoitUA/Pods-DoitUA.debug.xcconfig"; sourceTree = "<group>"; };
 		8580E3590A9CB2CD88E1F7BA /* Pods_DoitUA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoitUA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -193,6 +195,7 @@
 		424BD37B20B831A5007FB27D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				42C672C420BD80E6001DF4F1 /* ActivityView */,
 				424BD37C20B831B3007FB27D /* BaseView */,
 				421140DD20BBEF11006D82A9 /* ScrollableView */,
 			);
@@ -381,6 +384,14 @@
 			path = GifViewController;
 			sourceTree = "<group>";
 		};
+		42C672C420BD80E6001DF4F1 /* ActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				42C672C520BD80F2001DF4F1 /* ActivityView.swift */,
+			);
+			path = ActivityView;
+			sourceTree = "<group>";
+		};
 		9E415A5D339F0166643B9F6E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +529,7 @@
 				424BD35220B6DAA5007FB27D /* NetworkContext.swift in Sources */,
 				424BD3AA20B8464D007FB27D /* ImageSelector.swift in Sources */,
 				421140EF20BC44F9006D82A9 /* ImagesContext.swift in Sources */,
+				42C672C620BD80F2001DF4F1 /* ActivityView.swift in Sources */,
 				424BD39920B838AD007FB27D /* NSErrorExtensions.swift in Sources */,
 				424BD39720B837A7007FB27D /* ViewModel.swift in Sources */,
 				424BD34A20B69F9B007FB27D /* NetworkRequest.swift in Sources */,

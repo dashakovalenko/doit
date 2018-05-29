@@ -14,7 +14,19 @@ class ViewController: UIViewController, NibLoaded {
         return isViewLoaded ? view as? View : nil
     }
     
+    var loading: Bool = false {
+        didSet {
+            updateActivity()
+        }
+    }
+    private var activityView: UIView?
+    
     //MARK: - View lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateActivity()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -50,4 +62,18 @@ class ViewController: UIViewController, NibLoaded {
         showFailure(error.localizedDescription)
     }
     
+    //MARK: - Private
+    
+    private func updateActivity() {
+        if self.loading {
+            if activityView != nil { return }
+            let activity = ActivityView(frame: CGRect(origin: CGPoint.zero, size: view.frame.size))
+            view.addSubview(activity)
+            activityView = activity
+        } else {
+            activityView?.removeFromSuperview()
+            activityView = nil
+        }
+    }
+
 }
