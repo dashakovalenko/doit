@@ -24,17 +24,26 @@ class ImagesViewController: ViewController {
     
     //MARK: - View lifecycle
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        loadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let imagesViewController = segue.destination as? ImageViewController {
+            imagesViewController.session = session
+            imagesViewController.newImageHandler = loadData
+        }
+    }
+    
+    //MARK: - Private
+    
+    private func loadData() {
         imagesViewModel.loadData { [weak self] result in
             print(result)
             self?.imagesCollectionView.reloadData()
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        (segue.destination as? ImageViewController)?.session = session
     }
     
 }

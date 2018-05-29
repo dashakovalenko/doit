@@ -16,6 +16,8 @@ class ImageViewController: ViewController, ImageSelector {
     @IBOutlet var hashtagsField: UITextField!
     @IBOutlet var iconView: UIImageView!
     
+    var newImageHandler: (() -> ())?
+    
     private let newImageModel = ImageViewModel()
     var session: Session? {
         get {
@@ -60,6 +62,7 @@ class ImageViewController: ViewController, ImageSelector {
             switch result {
             case .success(let response):
                 print(String(describing: response))
+                self?.newImageHandler?()
                 self?.navigationController?.popViewController(animated: true)
             case .failure(let error):
                 self?.showError(error)
