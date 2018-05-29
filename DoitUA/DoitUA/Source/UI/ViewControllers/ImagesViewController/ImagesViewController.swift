@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImagesViewController: ViewController, LoginPresenter {
+class ImagesViewController: ViewController {
     
     @IBOutlet var imagesCollectionView: UICollectionView!
     

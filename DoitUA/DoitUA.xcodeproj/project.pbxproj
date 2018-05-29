@@ -49,6 +49,7 @@
 		42C672C920BD91EC001DF4F1 /* SessionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672C820BD91EC001DF4F1 /* SessionFetcher.swift */; };
 		42C672CB20BD9273001DF4F1 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672CA20BD9273001DF4F1 /* RootPresenter.swift */; };
 		42C672CD20BD9289001DF4F1 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672CC20BD9289001DF4F1 /* LoginPresenter.swift */; };
+		42C672D320BDB07C001DF4F1 /* ErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672D220BDB07C001DF4F1 /* ErrorExtensions.swift */; };
 		6DDA4B80C12BEE6B10D53154 /* Pods_DoitUA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8580E3590A9CB2CD88E1F7BA /* Pods_DoitUA.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		42C672C820BD91EC001DF4F1 /* SessionFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFetcher.swift; sourceTree = "<group>"; };
 		42C672CA20BD9273001DF4F1 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		42C672CC20BD9289001DF4F1 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		42C672D220BDB07C001DF4F1 /* ErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtensions.swift; sourceTree = "<group>"; };
 		6BF86E33C694EA1209BD908C /* Pods-DoitUA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitUA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoitUA/Pods-DoitUA.debug.xcconfig"; sourceTree = "<group>"; };
 		8580E3590A9CB2CD88E1F7BA /* Pods_DoitUA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoitUA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -246,6 +248,7 @@
 			children = (
 				424BD38B20B83287007FB27D /* NotificationNameExtensions.swift */,
 				424BD39820B838AD007FB27D /* NSErrorExtensions.swift */,
+				42C672D220BDB07C001DF4F1 /* ErrorExtensions.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				424BD3B220B8766B007FB27D /* ImageContext.swift in Sources */,
 				424BD37820B8314C007FB27D /* Session.swift in Sources */,
 				42C672BA20BD6391001DF4F1 /* GifViewController.swift in Sources */,
+				42C672D320BDB07C001DF4F1 /* ErrorExtensions.swift in Sources */,
 				424BD38520B83237007FB27D /* SignUpViewController.swift in Sources */,
 				421140E920BC31E2006D82A9 /* ImageViewController.swift in Sources */,
 				42C672B020BC5D37001DF4F1 /* Reusable.swift in Sources */,

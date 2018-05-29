@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, NibLoaded {
+class ViewController: UIViewController, NibLoaded, LoginPresenter {
 
     var mainView: View? {
         return isViewLoaded ? view as? View : nil
@@ -48,18 +48,22 @@ class ViewController: UIViewController, NibLoaded {
 
     //MARK: - Public
 
-    func showFailure(_ message: String) {
+    func showFailure(_ message: String, completion: (() -> ())? = nil) {
         let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in completion?() }))
         present(alertController, animated: true)
     }
     
-    func showError(_ error: Error?) {
+    func showError(_ error: Error?, needCheck: Bool = false) {
         guard let error = error else {
             return
         }
         
-        showFailure(error.localizedDescription)
+        showFailure(error.localizedDescription, completion: {
+            if needCheck && error.isAuth {
+                self.showLoginScreen()
+            }
+        })
     }
     
     //MARK: - Private
