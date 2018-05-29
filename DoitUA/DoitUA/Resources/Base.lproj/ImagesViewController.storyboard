@@ -246,6 +246,9 @@
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didClickOnLogout:" destination="rsN-gh-z9L" eventType="touchUpInside" id="4c5-uf-bH4"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <rightBarButtonItems>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImagesViewController: ViewController {
+class ImagesViewController: ViewController, LoginPresenter {
     
     @IBOutlet var imagesCollectionView: UICollectionView!
     
@@ -35,6 +35,12 @@ class ImagesViewController: ViewController {
             imagesViewController.session = session
             imagesViewController.newImageHandler = loadData
         }
+    }
+    
+    //MARK: - Actions
+    
+    @IBAction func didClickOnLogout(_ sender: Any) {
+        showLoginScreen()
     }
     
     //MARK: - Private

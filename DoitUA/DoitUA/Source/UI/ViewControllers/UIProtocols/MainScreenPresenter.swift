@@ -8,10 +8,19 @@
 
 import UIKit
 
-protocol MainScreenPresenter {
+protocol RootPresenter {}
+protocol MainScreenPresenter: RootPresenter {}
+protocol LoginPresenter: RootPresenter {}
+
+extension RootPresenter {
+    
+    fileprivate func setAsRoot(_ viewController: UIViewController?) {
+        UIApplication.shared.keyWindow?.rootViewController = viewController
+    }
+    
 }
 
-extension MainScreenPresenter where Self: UIViewController {
+extension MainScreenPresenter {
     
     func showMainImagesScreen(_ session: Session) {
         let identifier = ImagesViewController.nibName
@@ -24,7 +33,15 @@ extension MainScreenPresenter where Self: UIViewController {
         let navigationController = UINavigationController(rootViewController: imagesViewController)
         navigationController.navigationBar.backgroundColor = UIColor.darkGray
         navigationController.navigationBar.tintColor = UIColor.white
-        UIApplication.shared.keyWindow?.rootViewController = navigationController
+        setAsRoot(navigationController)
     }
     
+}
+
+extension LoginPresenter {
+    
+    func showLoginScreen() {
+        let loginController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        setAsRoot(loginController)
+    }
 }
