@@ -154,6 +154,48 @@
             </objects>
             <point key="canvasLocation" x="-606" y="42"/>
         </scene>
+        <!--Gif View Controller-->
+        <scene sceneID="4rP-UF-xMr">
+            <objects>
+                <viewController id="T8N-zw-T4p" customClass="GifViewController" customModule="DoitUA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o77-bO-rF7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1L-5y-Fgb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onDismiss:" destination="T8N-zw-T4p" eventType="touchUpInside" id="qB9-hr-eoy"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sBv-Yn-32T">
+                                <rect key="frame" x="25" y="212" width="325" height="243.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sBv-Yn-32T" secondAttribute="height" multiplier="327:245" id="ER4-Nq-VLs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X1L-5y-Fgb" firstAttribute="bottom" secondItem="Dxh-Kh-wGK" secondAttribute="bottom" id="0pw-3I-VGd"/>
+                            <constraint firstItem="X1L-5y-Fgb" firstAttribute="leading" secondItem="Dxh-Kh-wGK" secondAttribute="leading" id="AEY-dW-mP1"/>
+                            <constraint firstItem="sBv-Yn-32T" firstAttribute="leading" secondItem="Dxh-Kh-wGK" secondAttribute="leading" constant="25" id="ChR-Co-fZ5"/>
+                            <constraint firstItem="Dxh-Kh-wGK" firstAttribute="trailing" secondItem="sBv-Yn-32T" secondAttribute="trailing" constant="25" id="JVu-0o-Nim"/>
+                            <constraint firstItem="X1L-5y-Fgb" firstAttribute="trailing" secondItem="Dxh-Kh-wGK" secondAttribute="trailing" id="TDf-cW-kOX"/>
+                            <constraint firstItem="sBv-Yn-32T" firstAttribute="centerY" secondItem="o77-bO-rF7" secondAttribute="centerY" id="Voy-YJ-bsn"/>
+                            <constraint firstItem="X1L-5y-Fgb" firstAttribute="top" secondItem="o77-bO-rF7" secondAttribute="top" id="rXZ-f7-c4a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dxh-Kh-wGK"/>
+                    </view>
+                    <connections>
+                        <outlet property="gifImageView" destination="sBv-Yn-32T" id="xFU-2Q-dWC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0w-zj-PVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607.20000000000005" y="818.14092953523243"/>
+        </scene>
         <!--Images View Controller-->
         <scene sceneID="zhq-Lh-qtr">
             <objects>
@@ -271,6 +313,9 @@
                                     <state key="normal" image="Play">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <segue destination="T8N-zw-T4p" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="rqA-uN-ECm"/>
+                                    </connections>
                                 </button>
                             </barButtonItem>
                         </rightBarButtonItems>

@@ -1,16 +1,20 @@
 PODS:
   - Kingfisher (4.7.0)
+  - SwiftGifOrigin (1.6.1)
 
 DEPENDENCIES:
   - Kingfisher
+  - SwiftGifOrigin (~> 1.6.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Kingfisher
+    - SwiftGifOrigin
 
 SPEC CHECKSUMS:
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
 
-PODFILE CHECKSUM: 2670787833a1450f0eb2e4a4afa15894576de7c9
+PODFILE CHECKSUM: e22474d5ea7e7dbdb0f76bfec3fac74380167be5
 
 COCOAPODS: 1.5.0
