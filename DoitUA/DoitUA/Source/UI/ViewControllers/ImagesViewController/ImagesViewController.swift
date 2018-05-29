@@ -63,3 +63,24 @@ extension ImagesViewController: UICollectionViewDataSource {
     
 }
 
+extension ImagesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let numberOfItems: CGFloat = CGFloat(numberOfItemsInRow)
+        let cellWidth = (collectionView.frame.size.width - (10 * (numberOfItems + 1))) / numberOfItems
+        
+        return CGSize(width: cellWidth, height: cellWidth * 1.09)
+    }
+    
+    private var numberOfItemsInRow: Int {
+        switch UIApplication.shared.statusBarOrientation {
+        case .landscapeLeft, .landscapeRight:
+            return 3
+        default:
+            return 2
+        }
+    }
+}
+

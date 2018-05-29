@@ -222,6 +222,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="rsN-gh-z9L" id="wQ4-rg-wcQ"/>
+                                    <outlet property="delegate" destination="rsN-gh-z9L" id="T3z-LS-8mu"/>
                                 </connections>
                             </collectionView>
                         </subviews>
