@@ -16,10 +16,8 @@ extension SessionFetcher where Self: ViewController {
         loading = true
         call { [weak self] result in
             self?.loading = false
-            print(result)
             switch result {
             case .success(let response):
-                print(String(describing: response))
                 self?.showMainImagesScreen(response)
             case .failure(let error):
                 self?.showError(error)

@@ -20,7 +20,6 @@ struct Image {
     
     
     static func image(with json: [String: AnyObject]?) -> Image? {
-        print(String(describing: json))
         let keys = APIConfiguration.Image.self
         guard let json = json,
             let id = json[keys.id] as? Int,

@@ -90,7 +90,6 @@ extension ImageViewController: UIImagePickerControllerDelegate, UINavigationCont
             let imageCoordinate = self.coodinates(with: info) ?? locationManager.currentCoodrinate
             newImageModel.latitude = imageCoordinate?.latitude
             newImageModel.longitude = imageCoordinate?.longitude
-            print(String(describing: imageCoordinate))
         }
     }
     

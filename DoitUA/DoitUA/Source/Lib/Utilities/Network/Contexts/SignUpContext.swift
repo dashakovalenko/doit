@@ -49,7 +49,6 @@ class SignUpContext: NetworkContext<Session> {
     //MARK: - Private methods
     
     private func parsedFailureMessage(with json: [String: AnyObject]?) -> String? {
-        print(String(describing: json))
         guard let childrenJSON = json?[SignUp.children] as? [String: AnyObject] else {
             return nil
         }
