@@ -13,11 +13,13 @@ class GifViewController: ViewController {
 
     @IBOutlet var gifImageView: UIImageView!
     
-    var gifURL: String? = "http://api.doitserver.in.ua/upload/images/gif/939949db47915a6189700d842a5e7ed5.gif" {
-        didSet {
-            if isViewLoaded {
-                updateGif()
-            }
+    let gifViewModel = GifViewModel()
+    var session: Session? {
+        get {
+            return gifViewModel.session
+        }
+        set {
+            gifViewModel.session = newValue
         }
     }
     
@@ -25,7 +27,7 @@ class GifViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateGif()
+        loadData()
     }
     
     //MARK: - Actions
@@ -36,14 +38,15 @@ class GifViewController: ViewController {
  
     //MARK: - Private
     
-    private func updateGif() {
-        gifURL.map { gifURL in
-            DispatchQueue.global().async {
-                let image = UIImage.gif(url: gifURL)
-                DispatchQueue.main.async {
-                    self.gifImageView.image = image
-                }
+    private func loadData() {
+        gifViewModel.loadData { [weak self] (result) in
+            switch result {
+            case .success(let image):
+                self?.gifImageView.image = image
+            case .failure(let error):
+                print(error)
             }
         }
     }
+
 }

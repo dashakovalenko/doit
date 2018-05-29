@@ -35,6 +35,9 @@ class ImagesViewController: ViewController, LoginPresenter {
             imagesViewController.session = session
             imagesViewController.newImageHandler = loadData
         }
+        if let gifViewController = segue.destination as? GifViewController {
+            gifViewController.session = session
+        }
     }
     
     //MARK: - Actions
@@ -47,7 +50,6 @@ class ImagesViewController: ViewController, LoginPresenter {
     
     private func loadData() {
         imagesViewModel.loadData { [weak self] result in
-            print(result)
             self?.imagesCollectionView.reloadData()
         }
     }

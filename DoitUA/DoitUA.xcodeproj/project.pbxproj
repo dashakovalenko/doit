@@ -44,6 +44,8 @@
 		42C672B220BC607A001DF4F1 /* NibLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672B120BC607A001DF4F1 /* NibLoaded.swift */; };
 		42C672B520BC63AA001DF4F1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672B420BC63AA001DF4F1 /* UIImage+Extensions.swift */; };
 		42C672BA20BD6391001DF4F1 /* GifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672B920BD6391001DF4F1 /* GifViewController.swift */; };
+		42C672BC20BD70C9001DF4F1 /* GifContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672BB20BD70C9001DF4F1 /* GifContext.swift */; };
+		42C672BE20BD7175001DF4F1 /* GifViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C672BD20BD7175001DF4F1 /* GifViewModel.swift */; };
 		6DDA4B80C12BEE6B10D53154 /* Pods_DoitUA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8580E3590A9CB2CD88E1F7BA /* Pods_DoitUA.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		42C672B120BC607A001DF4F1 /* NibLoaded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoaded.swift; sourceTree = "<group>"; };
 		42C672B420BC63AA001DF4F1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		42C672B920BD6391001DF4F1 /* GifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewController.swift; sourceTree = "<group>"; };
+		42C672BB20BD70C9001DF4F1 /* GifContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifContext.swift; sourceTree = "<group>"; };
+		42C672BD20BD7175001DF4F1 /* GifViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewModel.swift; sourceTree = "<group>"; };
 		6BF86E33C694EA1209BD908C /* Pods-DoitUA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitUA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoitUA/Pods-DoitUA.debug.xcconfig"; sourceTree = "<group>"; };
 		8580E3590A9CB2CD88E1F7BA /* Pods_DoitUA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoitUA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -168,10 +172,11 @@
 		424BD37120B83143007FB27D /* Contexts */ = {
 			isa = PBXGroup;
 			children = (
-				424BD37220B83143007FB27D /* LoginContext.swift */,
-				424BD37320B83143007FB27D /* SignUpContext.swift */,
+				42C672BB20BD70C9001DF4F1 /* GifContext.swift */,
 				424BD3B120B8766B007FB27D /* ImageContext.swift */,
 				421140EE20BC44F9006D82A9 /* ImagesContext.swift */,
+				424BD37220B83143007FB27D /* LoginContext.swift */,
+				424BD37320B83143007FB27D /* SignUpContext.swift */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				42C672B920BD6391001DF4F1 /* GifViewController.swift */,
+				42C672BD20BD7175001DF4F1 /* GifViewModel.swift */,
 			);
 			path = GifViewController;
 			sourceTree = "<group>";
@@ -520,6 +526,7 @@
 				424BD3AD20B852F2007FB27D /* MainScreenPresenter.swift in Sources */,
 				424BD34E20B6D506007FB27D /* APIConfiguration.swift in Sources */,
 				4294943020B55B8F00E27E77 /* ViewController.swift in Sources */,
+				42C672BE20BD7175001DF4F1 /* GifViewModel.swift in Sources */,
 				424BD34720B69C74007FB27D /* Context.swift in Sources */,
 				424BD39120B835D6007FB27D /* LoginViewModel.swift in Sources */,
 				421140E820BC31E2006D82A9 /* ImagesViewController.swift in Sources */,
@@ -531,6 +538,7 @@
 				424BD38520B83237007FB27D /* SignUpViewController.swift in Sources */,
 				421140E920BC31E2006D82A9 /* ImageViewController.swift in Sources */,
 				42C672B020BC5D37001DF4F1 /* Reusable.swift in Sources */,
+				42C672BC20BD70C9001DF4F1 /* GifContext.swift in Sources */,
 				424BD3B420B8767B007FB27D /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

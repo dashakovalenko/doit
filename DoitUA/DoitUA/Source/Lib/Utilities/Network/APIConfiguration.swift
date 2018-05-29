@@ -16,6 +16,7 @@ struct APIConfiguration {
         static let login = "login"
         static let image = "image"
         static let all = "all"
+        static let gif = "gif"
     }
     
     struct User {
