@@ -46,14 +46,17 @@ class ImagesViewController: ViewController {
         showLoginScreen()
     }
     
-    //MARK: - Private
-    
-    private func loadData() {
-        imagesViewModel.loadData { [weak self] result in
-            self?.imagesCollectionView.reloadData()
-        }
+}
+
+extension ImagesViewController: DataLoader {
+    typealias Model = [Image]
+    var dataLoadCall: (((Result<[Image]>) -> ())?) -> Void {
+        return imagesViewModel.loadData
     }
     
+    func handleSuccess(_ data: [Image]) {
+        imagesCollectionView.reloadData()
+    }
 }
 
 extension ImagesViewController: UICollectionViewDataSource {

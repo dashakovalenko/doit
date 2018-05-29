@@ -63,17 +63,19 @@ class ImageViewController: ViewController, ImageSelector {
         newImageModel.loadData { (result) in
             self.loading = false
             sender.isEnabled = true
-            switch result {
-            case .success(let response):
-                print(String(describing: response))
-                self.newImageHandler?()
-                self.navigationController?.popViewController(animated: true)
-            case .failure(let error):
-                self.showError(error)
-            }
+            self.handleResult(result)
         }
     }
     
+}
+
+extension ImageViewController: ResultHandler {
+    typealias Model = [String: AnyObject]
+    
+    func handleSuccess(_ data: [String: AnyObject]) {
+        self.newImageHandler?()
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension ImageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

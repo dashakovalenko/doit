@@ -35,18 +35,17 @@ class GifViewController: ViewController {
     @IBAction func onDismiss(_ sender: Any) {
         dismiss(animated: true)
     }
- 
-    //MARK: - Private
-    
-    private func loadData() {
-        gifViewModel.loadData { [weak self] (result) in
-            switch result {
-            case .success(let image):
-                self?.gifImageView.image = image
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
 
+}
+
+extension GifViewController: DataLoader {
+    typealias Model = UIImage?
+
+    var dataLoadCall: (((Result<UIImage?>) -> ())?) -> Void {
+        return gifViewModel.loadData
+    }
+    
+    func handleSuccess(_ data: UIImage?) {
+        gifImageView.image = data
+    }
 }
